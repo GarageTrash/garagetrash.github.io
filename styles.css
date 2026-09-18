@@ -54,8 +54,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 7rem;
-  padding: 1rem var(--gutter);
+  min-height: 5.5rem;
+  padding: 0.85rem var(--gutter);
   border-bottom: var(--line);
 }
 
@@ -116,7 +116,7 @@ a {
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.8fr);
-  min-height: calc(100vh - 7rem);
+  min-height: clamp(38rem, calc(100vh - 5.5rem), 52rem);
   border-bottom: var(--line);
 }
 
@@ -124,7 +124,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(3rem, 8vw, 8rem) var(--gutter);
+  padding: clamp(3rem, 6vw, 6rem) var(--gutter);
 }
 
 .eyebrow {
@@ -146,14 +146,12 @@ a {
 
 h1,
 h2,
-h3,
 p {
   margin-top: 0;
 }
 
 h1,
-h2,
-h3 {
+h2 {
   line-height: 0.92;
   text-transform: uppercase;
 }
@@ -170,12 +168,6 @@ h2 {
   font-size: clamp(2rem, 5vw, 4.75rem);
   font-weight: 1000;
   letter-spacing: -0.06em;
-}
-
-h3 {
-  font-size: 1.55rem;
-  font-weight: 1000;
-  letter-spacing: -0.04em;
 }
 
 .intro {
@@ -256,8 +248,8 @@ h3 {
   display: grid;
   grid-template-columns: 1.2fr 1fr auto;
   align-items: center;
-  gap: 3rem;
-  padding: clamp(3rem, 6vw, 6rem) var(--gutter);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(2.5rem, 4vw, 4rem) var(--gutter);
   color: var(--paper);
   background: var(--ink);
   border-bottom: var(--line);
@@ -277,9 +269,9 @@ h3 {
 .manifesto,
 .story-grid {
   display: grid;
-  grid-template-columns: 0.25fr 1fr 1fr;
-  gap: 3rem;
-  padding: clamp(4rem, 9vw, 9rem) var(--gutter);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: clamp(3rem, 6vw, 6rem) var(--gutter);
 }
 
 .manifesto > p:last-child,
@@ -289,23 +281,19 @@ h3 {
   font-size: clamp(1.1rem, 1.6vw, 1.35rem);
 }
 
-.section-number {
-  font-size: 0.75rem;
-  font-weight: 900;
-}
-
 .page-hero {
-  padding: clamp(5rem, 12vw, 11rem) var(--gutter) clamp(4rem, 8vw, 7rem);
+  padding: clamp(3.5rem, 7vw, 7rem) var(--gutter) clamp(3rem, 5vw, 5rem);
   border-bottom: var(--line);
 }
 
 .page-hero h1 {
   max-width: 12ch;
   margin-bottom: 0;
+  font-size: clamp(3.8rem, 8vw, 7rem);
 }
 
 .page-hero.compact {
-  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block: clamp(3rem, 5vw, 5rem);
 }
 
 .story-grid {
@@ -316,46 +304,12 @@ h3 {
   font-size: clamp(2rem, 4vw, 4rem);
 }
 
-.values {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-bottom: var(--line);
-}
-
-.values article {
-  min-height: 22rem;
-  padding: clamp(2rem, 4vw, 4rem);
-}
-
-.values article + article {
-  border-left: var(--line);
-}
-
-.values span {
-  display: block;
-  margin-bottom: 5rem;
-  color: #666;
-  font-size: 0.7rem;
-  font-weight: 900;
-}
-
-.values h3 {
-  text-decoration: underline;
-  text-decoration-color: var(--green);
-  text-decoration-thickness: 0.45rem;
-  text-underline-offset: -0.1rem;
-}
-
-.values p {
-  max-width: 23rem;
-}
-
 .product-feature {
   display: grid;
   grid-template-columns: minmax(20rem, 0.9fr) 1.1fr;
-  gap: clamp(3rem, 8vw, 8rem);
+  gap: clamp(3rem, 6vw, 6rem);
   align-items: center;
-  padding: clamp(3rem, 8vw, 8rem) var(--gutter);
+  padding: clamp(3rem, 6vw, 6rem) var(--gutter);
   border-bottom: var(--line);
 }
 
@@ -415,12 +369,8 @@ h3 {
   text-transform: uppercase;
 }
 
-.product-copy > .button {
-  margin-block: 1rem 2.5rem;
-}
-
 .product-actions {
-  margin-block: 1rem 2.5rem;
+  margin-block: 1rem 2rem;
 }
 
 .release-details {
@@ -448,7 +398,7 @@ h3 {
 }
 
 .empty-shelf {
-  padding: clamp(4rem, 9vw, 9rem) var(--gutter);
+  padding: clamp(3rem, 5vw, 5rem) var(--gutter);
   background: var(--green);
 }
 
@@ -464,8 +414,7 @@ h3 {
 }
 
 .contact-grid > div {
-  min-height: 28rem;
-  padding: clamp(3rem, 6vw, 6rem) var(--gutter);
+  padding: clamp(3rem, 4.5vw, 4.5rem) var(--gutter);
 }
 
 .contact-grid > div + div {
@@ -488,42 +437,17 @@ h3 {
   font-size: 1.1rem;
 }
 
-.contact-note {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 3rem var(--gutter);
-  color: var(--paper);
-  background: var(--ink);
-  text-align: center;
-}
-
-.contact-note span {
-  color: var(--green);
-  font-size: 1.5rem;
-}
-
-.contact-note p {
-  margin: 0;
-}
-
 .payment-main {
-  min-height: calc(100vh - 7rem);
+  min-height: calc(100vh - 5.5rem);
 }
 
 .payment-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.55fr);
   align-items: end;
-  gap: clamp(2rem, 8vw, 8rem);
-  padding: clamp(4rem, 9vw, 8rem) var(--gutter);
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: clamp(3rem, 5vw, 5rem) var(--gutter);
   border-bottom: var(--line);
-}
-
-.payment-hero .eyebrow {
-  grid-column: 1 / -1;
-  margin-bottom: clamp(-1rem, -2vw, -2rem);
 }
 
 .payment-hero h1 {
@@ -539,16 +463,14 @@ h3 {
 .payment-options {
   display: grid;
   grid-template-columns: minmax(18rem, 0.8fr) minmax(22rem, 1.2fr);
-  gap: clamp(3rem, 8vw, 8rem);
-  padding: clamp(3rem, 8vw, 7rem) var(--gutter);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  padding: clamp(3rem, 5vw, 5rem) var(--gutter);
   color: var(--paper);
   background: var(--ink);
 }
 
 .payment-heading {
-  display: grid;
-  grid-template-columns: 2rem 1fr;
-  gap: 1rem;
+  align-self: center;
 }
 
 .payment-heading h2 {
@@ -565,8 +487,8 @@ h3 {
   grid-template-columns: 3.25rem 1fr auto;
   align-items: center;
   gap: 1rem;
-  min-height: 6.75rem;
-  padding: 1rem 0.5rem;
+  min-height: 5.75rem;
+  padding: 0.75rem 0.5rem;
   border-bottom: 2px solid var(--paper);
   text-decoration: none;
   transition: color 120ms ease, padding 120ms ease;
@@ -621,7 +543,7 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  padding: 2.5rem var(--gutter);
+  padding: 1.75rem var(--gutter);
   background: var(--green);
 }
 
@@ -645,7 +567,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  padding: 2rem var(--gutter);
+  padding: 1.5rem var(--gutter);
   border-top: var(--line);
   font-size: 0.68rem;
   font-weight: 900;
@@ -661,8 +583,8 @@ h3 {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
-    gap: 1.25rem;
-    padding-block: 1.25rem;
+    gap: 1rem;
+    padding-block: 1rem;
   }
 
   .site-nav {
@@ -695,30 +617,13 @@ h3 {
 
   .manifesto,
   .story-grid {
-    grid-template-columns: 2rem 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
   .manifesto > p:last-child,
   .story-grid .prose {
-    grid-column: 2;
-  }
-
-  .values {
-    grid-template-columns: 1fr;
-  }
-
-  .values article {
-    min-height: auto;
-  }
-
-  .values article + article {
-    border-top: var(--line);
-    border-left: 0;
-  }
-
-  .values span {
-    margin-bottom: 3rem;
+    grid-column: auto;
   }
 
   .record-art {
@@ -738,10 +643,6 @@ h3 {
     border-left: 0;
   }
 
-  .payment-hero .eyebrow {
-    grid-column: auto;
-    margin-bottom: 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -768,7 +669,7 @@ h3 {
 
   .payment-option {
     grid-template-columns: 2.75rem 1fr auto;
-    min-height: 6rem;
+    min-height: 5.5rem;
   }
 
   .payment-mark {
