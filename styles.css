@@ -446,6 +446,111 @@ h2 {
   margin: 0;
 }
 
+.releases-page {
+  min-height: calc(100vh - 10rem);
+  padding: clamp(4rem, 7vw, 7rem) var(--gutter);
+  border-bottom: var(--line);
+}
+
+.releases-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.5fr);
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.releases-header .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.releases-header h1 {
+  margin-bottom: 0;
+  font-size: clamp(4rem, 10vw, 9rem);
+}
+
+.releases-header > p:last-child {
+  margin-bottom: 1rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700;
+}
+
+.release-section {
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+}
+
+.release-section > h2 {
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.release-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.release-card {
+  max-width: 48rem;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  border: var(--line);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  transform: rotate(-0.7deg);
+}
+
+.release-card:nth-child(even) {
+  transform: rotate(0.8deg);
+}
+
+.release-card .catalog-line {
+  color: var(--green);
+}
+
+.release-card h3 {
+  margin: 0 0 0.75rem;
+  font-family: "Arial Black", Impact, sans-serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.release-title {
+  margin-bottom: 0;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 900;
+}
+
+.release-title span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.hype-copy {
+  margin: 2rem 0 0;
+  padding: 1.25rem;
+  border: var(--line);
+  color: var(--green);
+  background: var(--ink);
+  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+  font-weight: 900;
+  line-height: 1.25;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+}
+
+.release-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -639,6 +744,11 @@ h2 {
   }
 
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .releases-header,
+  .release-grid {
     grid-template-columns: 1fr;
   }
 }
