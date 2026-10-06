@@ -271,7 +271,6 @@ h2 {
   border: var(--line);
   box-shadow: 6px 6px 0 var(--ink);
   filter: contrast(1.1);
-  mix-blend-mode: multiply;
   transform: rotate(3deg);
 }
 
